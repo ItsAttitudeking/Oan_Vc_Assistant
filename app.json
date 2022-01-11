@@ -1,0 +1,51 @@
+{
+    "name": "OAN VC Assistant",
+    "description": "A Telegram User music bot to play Songs in Voice Chat",
+    "logo": "https://telegra.ph/file/7252c2550c1aeb1008e73.jpg",
+    "keywords": [
+        "Telegram",
+        "OANBot",
+        "MusicPlayer"
+    ],
+    "repository": "https://github.com/ItsAttitudeking/Oan_Vc_Assistant",
+    "env": {
+        "SESSION": {
+            "description": "Pyrogram String Session",
+            "required": true
+        },
+        "API_ID": {
+            "description": "my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "my.telegram.org",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "Handler | Default (!)",
+            "value": "!",
+            "required": false 
+        },
+        "GROUP_MODE": {
+            "description": "Anyone can play, if set to True. Set it to False to restrict play access to Sudo Users/Contacts only",
+            "value": "True",
+            "required": true 
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
