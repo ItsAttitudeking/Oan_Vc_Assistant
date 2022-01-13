@@ -38,7 +38,7 @@ async def ping(client, m: Message):
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
    await m_reply.edit(f"┏━━━━━━━━━❥\n┣✯
-PONG🔊\n┣✯OAN BOT IS ALIVE [🪄](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)\n┣✯{delta_ping * 1000:.3f} ms \n┣✯Uptime🛎 ➫ {uptime}\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https://t.me/Attitude_Network)\n┗━━━━━━━━━❥")
+PONG🔊\n┣✯OAN BOT IS ALIVE [🪄](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)\n┣✯`{delta_ping * 1000:.3f} ms` \n┣✯Uptime🛎 ➫ {uptime}\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https://t.me/Attitude_Network)\n┗━━━━━━━━━❥")
 
 @Client.on_message(contact_filter & filters.command(['restart'], prefixes=f"{HNDLR}"))
 async def restart(client, m: Message):
