@@ -53,7 +53,7 @@ async def play(client, m: Message):
    chat_id = m.chat.id
    if replied:
       if replied.audio or replied.voice:
-         huehue = await replied.reply("`Downloading`")
+         huehue = await replied.reply("🔎")
          dl = await replied.download()
          link = replied.link
          if replied.audio:
@@ -68,7 +68,7 @@ async def play(client, m: Message):
             songname = "Voice Note"
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"Queued at **#{pos}**")
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
          else:
           try:
             await call_py.join_group_call(
@@ -79,28 +79,28 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"**Started Playing Audio ▶** \n**🎧 SONG** : [{songname}]({link}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
           except Exception as hmme:
             await huehue.edit(hmme)
       else:
          if len(m.command) < 2:
-            await m.reply("`Reply to an Audio File or give something to Search`")
+            await m.reply("𝄥𝄞─────────────\n\n⏤͟͟͞͞✯Reply to an Audio🎧 File or give something to Search🔎\n\n────────────── 𝄇")
          else:
             huehue = await m.reply("`Searching...`")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search==0:
-               await huehue.edit("`Found Nothing for the Given Query`")
+               await huehue.edit("𝄥𝄞─────────────\n\n ⏤͟͟͞͞✯Found Nothing for the Given Query\n\n────────────── 𝄇")
             else:
                songname = search[0]
                url = search[1]
                hm, ytlink = await ytdl(url)
                if hm==0:
-                  await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                  await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"Queued at **#{pos}**")
+                     await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
                   else:
                      try:
                         await call_py.join_group_call(
@@ -111,29 +111,29 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**Started Playing Audio ▶** \n**🎧 SONG** : [{songname}]({url}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
    else:
          if len(m.command) < 2:
-            await m.reply("`Reply to an Audio File or give something to Search`")
+            await m.reply("𝄥𝄞─────────────\n\n⏤͟͟͞͞✯Reply to an Audio🎧 File or give something to Search🔎\n\n────────────── 𝄇")
          else:
-            huehue = await m.reply("`Searching...`")
+            huehue = await m.reply("⚡")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search==0:
-               await huehue.edit("`Found Nothing for the Given Query`")
+               await huehue.edit("𝄥𝄞─────────────\n\n ⏤͟͟͞͞✯Found Nothing for the Given Query\n\n────────────── 𝄇")
             else:
                songname = search[0]
                url = search[1]
                hm, ytlink = await ytdl(url)
                if hm==0:
-                  await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                  await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                     await huehue.edit(f"Queued at **#{pos}**")
+                     await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
                   else:
                      try:
                         await call_py.join_group_call(
@@ -144,7 +144,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**Started Playing Audio ▶** \n**🎧 SONG** : [{songname}]({url}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
 
@@ -156,7 +156,7 @@ async def stream(client, m: Message):
       await m.reply("`Give A Link/LiveLink/.m3u8 URL/YTLink to Play Audio from 🎶`")
    else: 
       link = m.text.split(None, 1)[1]
-      huehue = await m.reply("`Trying to Play 📻`")
+      huehue = await m.reply("📣")
 
       # Filtering out YouTube URL's
       regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
@@ -168,11 +168,11 @@ async def stream(client, m: Message):
          hm = 1
       
       if hm==0:
-         await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+         await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
       else:
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
-            await huehue.edit(f"Queued at **#{pos}**")
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
          else:
             try:
                await call_py.join_group_call(
@@ -183,6 +183,6 @@ async def stream(client, m: Message):
                   stream_type=StreamType().pulse_stream,
                )
                add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
-               await huehue.edit(f"Started Playing **[Radio 📻]({link})** in `{chat_id}`", disable_web_page_preview=True)
+               await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Radio [📻](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯🎧 ➠ **[Radio 📻]({link})** \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`")
