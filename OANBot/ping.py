@@ -50,8 +50,3 @@ async def restart(client, m: Message):
 async def help(client, m: Message):
    HELP = f"**⏤͟͟͞͞✯HELP MENU 🛠✰࿐** \n\n✯✯USER COMMANDS✯✯\n➠(Anyone can Use if `GROUP_MODE` is set to `True`): \n ➥ `{HNDLR}play`  \n ➥ `{HNDLR}vplay`  \n ➥ `{HNDLR}stream` (For Radio links) \n ➥ `{HNDLR}vstream` (For live video links) \n ➥ `{HNDLR}playfrom [channel] ; [n]` (Plays last n songs from channel) \n ➥ `{HNDLR}playlist`  \n ➥ `{HNDLR}queue` \n\n ✯✯SUDO COMMANDS✯✯ \n ➠(Can only be accessed by You and Your Contacts): \n ➥ `{HNDLR}alive` \n ➥ `{HNDLR}skip` \n ➥ `{HNDLR}pause` \n ➥ `{HNDLR}resume` \n ➥ `{HNDLR}stop` \n ➥ `{HNDLR}end` \n ➥ `{HNDLR}help` \n ➥ `{HNDLR}restart`"
    await m.reply(HELP)
-
-@Client.on_message(contact_filter & filters.command(['repo'], prefixes=f"{HNDLR}"))
-async def help(client, m: Message):
-   HELP = f"**⏤͟͟͞͞✯SOURCE✰࿐** \n\n➥✯✯✯[REPO](https://github.com/ItsAttitudeking/Oan_Vc_Assistant)✯✯✯
-   await m.reply(repo)
