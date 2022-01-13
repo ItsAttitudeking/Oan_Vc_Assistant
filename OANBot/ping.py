@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
-   m_reply = await m.reply_text("😏")
+   m_reply = await m.reply_text("`.....`")
    delta_ping = time() - start
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
