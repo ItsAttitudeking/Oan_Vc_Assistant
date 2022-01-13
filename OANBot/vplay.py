@@ -95,7 +95,7 @@ async def vplay(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Video", Q)
-            await huehue.edit(f"ཧᜰ꙰ꦿ➢𝐎𝐀𝐍༒☛\n\n┏━━━━━━━━━❥\n┣✯ **Started Playing Video ▶️**\n┣✯🎧Song :  [{songname}]({url}) \n┣✯💬Chat :  `{chat_id}`\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https:/t.me/Attitude_Network)\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+            await huehue.edit(f"ཧᜰ꙰ꦿ➢𝐎𝐀𝐍༒☛\n\n┏━━━━━━━━━❥\n┣✯ **Started Playing Video ▶️**\n┣✯🎧Song :  [{songname}]({url}) \n┣✯💬Chat :  `{chat_id}`\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [😜JOIN📍](https:/t.me/Attitude_Network) \n┗━━━━━━━━━❥", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
             await m.reply("𝄥𝄞─────────────\n\n➥Reply to an Audio File or give something to Search\n\n────────────── 𝄇")
@@ -166,7 +166,7 @@ async def vplay(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
-                        await huehue.edit(f"ཧᜰ꙰ꦿ➢𝐎𝐀𝐍༒☛\n\n┏━━━━━━━━━❥\n┣✯ **Started Playing Video ▶️**\n┣✯🎧Song :  [{songname}]({url}) \n┣✯💬Chat :  `{chat_id}`\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https:/t.me/Attitude_Network)\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+                        await huehue.edit(f"ཧᜰ꙰ꦿ➢𝐎𝐀𝐍༒☛\n\n┏━━━━━━━━━❥\n┣✯ **Started Playing Video ▶️**\n┣✯🎧Song :  [{songname}]({url}) \n┣✯💬Chat :  `{chat_id}`\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https:/t.me/Attitude_Network) \n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
 
