@@ -29,7 +29,7 @@ async def _human_time_duration(seconds):
     return ', '.join(parts)
 
 
-@Client.on_message(contact_filter & filters.command(['ping'], prefixes=f"{HNDLR}"))
+@Client.on_message(contact_filter & filters.command(['alive'], prefixes=f"{HNDLR}"))
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
@@ -37,7 +37,7 @@ async def ping(client, m: Message):
    delta_ping = time() - start
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
-   await m_reply.edit(f"┏━━━━━━━━━❥\n┣✯PONG🔊\n┣✯OAN BOT IS ALIVE [🪄](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)\n┣✯`{delta_ping * 1000:.3f} ms` \n┣✯Uptime🛎 ➫ {uptime}\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https://t.me/Attitude_Network)\n┗━━━━━━━━━❥")
+   await m_reply.edit(f"┏━━━━━━━━━❥ \n ┣✯➢𝐎𝐀𝐍 𝐁𝐎𝐓 𝐈𝐒 𝐀𝐋𝐈𝐕𝐄[🔥](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)\n┣✯**📍Ping✯⚡Pong🔊** \n ➥ `{delta_ping * 1000:.3f} ms` \n┣✯**Uptime🛎** ➫ {uptime}\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https://t.me/Attitude_Network)\n┗━━━━━━━━━❥")
 
 @Client.on_message(contact_filter & filters.command(['restart'], prefixes=f"{HNDLR}"))
 async def restart(client, m: Message):
@@ -48,5 +48,10 @@ async def restart(client, m: Message):
 
 @Client.on_message(contact_filter & filters.command(['help'], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
-   HELP = f"**⏤͟͟͞͞✯HELP MENU 🛠✰࿐** \n\n✯✯USER COMMANDS✯✯\n➠(Anyone can Use if `GROUP_MODE` is set to `True`): \n➥`{HNDLR}play` \n➥`{HNDLR}vplay` \n➥`{HNDLR}stream` (For Radio links) \n➥`{HNDLR}vstream` (For live video links) \n➥`{HNDLR}playfrom [channel] ; [n]` (Plays last n songs from channel) \n➥`{HNDLR}playlist`  \n➥`{HNDLR}queue` \n\n✯✯SUDO COMMANDS✯✯\n➠(Can only be accessed by You and Your Contacts): \n➥`{HNDLR}ping` \n➥`{HNDLR}skip` \n➥`{HNDLR}pause` \n➥`{HNDLR}resume` \n➥`{HNDLR}stop` \n➥`{HNDLR}end` \n➥`{HNDLR}help` \n➥`{HNDLR}restart`"
+   HELP = f"**⏤͟͟͞͞✯HELP MENU 🛠✰࿐** \n\n✯✯USER COMMANDS✯✯\n➠(Anyone can Use if `GROUP_MODE` is set to `True`): \n ➥ `{HNDLR}play`  \n ➥ `{HNDLR}vplay`  \n ➥ `{HNDLR}stream` (For Radio links) \n ➥ `{HNDLR}vstream` (For live video links) \n ➥ `{HNDLR}playfrom [channel] ; [n]` (Plays last n songs from channel) \n ➥ `{HNDLR}playlist`  \n ➥ `{HNDLR}queue` \n\n ✯✯SUDO COMMANDS✯✯ \n ➠(Can only be accessed by You and Your Contacts): \n ➥ `{HNDLR}alive` \n ➥ `{HNDLR}skip` \n ➥ `{HNDLR}pause` \n ➥ `{HNDLR}resume` \n ➥ `{HNDLR}stop` \n ➥ `{HNDLR}end` \n ➥ `{HNDLR}help` \n ➥ `{HNDLR}restart`"
    await m.reply(HELP)
+
+@Client.on_message(contact_filter & filters.command(['repo'], prefixes=f"{HNDLR}"))
+async def help(client, m: Message):
+   HELP = f"**⏤͟͟͞͞✯SOURCE✰࿐** \n\n➥✯✯✯[REPO](https://github.com/ItsAttitudeking/Oan_Vc_Assistant)✯✯✯
+   await m.reply(repo)
