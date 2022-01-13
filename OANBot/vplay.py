@@ -77,7 +77,7 @@ async def vplay(client, m: Message):
   
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
-            await huehue.edit(f"Queued at **#{pos}**")
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
          else:
             if Q==720:
                hmmm = HighQualityVideo()
@@ -95,28 +95,28 @@ async def vplay(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Video", Q)
-            await huehue.edit(f"**Started Playing Video ▶** \n**🎧 SONG** : [{songname}]({link}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+            await huehue.edit(f"┏━━━━━━━━━❥\n✯✯**Started Playing Video ▶**✯✯ \n┃\n┣✯**[🎧](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}`\n┃\n┣✯🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 : @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
-            await m.reply("`Reply to an Audio File or give something to Search`")
+            await m.reply("𝄥𝄞─────────────\n\n➥Reply to an Audio File or give something to Search\n\n────────────── 𝄇")
          else:
-            huehue = await m.reply("`Searching...`")
+            huehue = await m.reply("🔎")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
             hmmm = HighQualityVideo()
             if search==0:
-               await huehue.edit("`Found Nothing for the Given Query`")
+               await huehue.edit("𝄥𝄞─────────────\n\n➥Found Nothing for the Given Query.\n\n────────────── 𝄇")
             else:
                songname = search[0]
                url = search[1]
                hm, ytlink = await ytdl(url)
                if hm==0:
-                  await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                  await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
-                     await huehue.edit(f"Queued at **#{pos}**")
+                     await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
                   else:
                      try:
                         await call_py.join_group_call(
@@ -129,7 +129,7 @@ async def vplay(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
-                        await huehue.edit(f"**Started Playing Video ▶** \n**🎧 SONG** : [{songname}]({url}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Video [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
@@ -143,17 +143,17 @@ async def vplay(client, m: Message):
             Q = 720
             hmmm = HighQualityVideo()
             if search==0:
-               await huehue.edit("`Found Nothing for the Given Query`")
+               await huehue.edit("𝄥𝄞─────────────\n\n ⏤͟͟͞͞✯Found Nothing for the Given Query\n\n────────────── 𝄇")
             else:
                songname = search[0]
                url = search[1]
                hm, ytlink = await ytdl(url)
                if hm==0:
-                  await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+                  await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
                else:
                   if chat_id in QUEUE:
                      pos = add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
-                     await huehue.edit(f"Queued at **#{pos}**")
+                     await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
                   else:
                      try:
                         await call_py.join_group_call(
@@ -166,7 +166,7 @@ async def vplay(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Video", Q)
-                        await huehue.edit(f"**Started Playing Video ▶** \n**🎧 SONG** : [{songname}]({url}) \n**💬 CHAT** : `{chat_id}`", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Video [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
 
@@ -181,7 +181,7 @@ async def vstream(client, m: Message):
       if len(m.command)==2:
          link = m.text.split(None, 1)[1]
          Q = 720
-         huehue = await m.reply("`Trying to Stream 💭`")
+         huehue = await m.reply("𝄥𝄞─────────────\n\n➥Trying to Stream 💭\n\n────────────── 𝄇")
       elif len(m.command)==3:
          op = m.text.split(None, 1)[1]
          link = op.split(None, 1)[0]
@@ -191,7 +191,7 @@ async def vstream(client, m: Message):
          else:
             Q = 720
             await m.reply("`Only 720, 480, 360 Allowed` \n`Now Streaming in 720p`")
-         huehue = await m.reply("`Trying to Stream 💭`")
+         huehue = await m.reply("𝄥𝄞─────────────\n\n➥Trying to Stream 💭\n\n────────────── 𝄇")
       else:
          await m.reply("`!vstream {link} {720/480/360}`")
 
@@ -205,11 +205,11 @@ async def vstream(client, m: Message):
          hm = 1
 
       if hm==0:
-         await huehue.edit(f"**YTDL ERROR ⚠️** \n\n`{ytlink}`")
+         await huehue.edit(f"**➥ERROR⚠️**\n\n➥Ask to ➠ @OAN_Support \n\n➥`{ytlink}` \n\n 🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ @Attitude_Network")
       else:
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, "Live Stream 📺", livelink, link, "Video", Q)
-            await huehue.edit(f"Queued at **#{pos}**")
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯[〽️](https://telegra.ph/file/114b8e7116d319d231981.jpg)Queued at **#{pos}**\n┗━━━━━━━━━❥")
          else:
             if Q==720:
                hmmm = HighQualityVideo()
@@ -228,6 +228,6 @@ async def vstream(client, m: Message):
                   stream_type=StreamType().pulse_stream,
                )
                add_to_queue(chat_id, "Live Stream 📺", livelink, link, "Video", Q)
-               await huehue.edit(f"Started **[Live Stream 📺]({link})** in `{chat_id}`", disable_web_page_preview=True)
+               await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧** ➫ **[Live Stream 📺]({link})** \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`")
