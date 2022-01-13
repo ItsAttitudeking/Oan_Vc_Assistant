@@ -33,20 +33,21 @@ async def _human_time_duration(seconds):
 async def ping(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
-   m_reply = await m.reply_text("`...`")
+   m_reply = await m.reply_text("😏")
    delta_ping = time() - start
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
-   await m_reply.edit(f"`{delta_ping * 1000:.3f} ms` \n**Uptime ⏳** - `{uptime}`")
+   await m_reply.edit(f"┏━━━━━━━━━❥\n┣✯
+PONG🔊\n┣✯OAN BOT IS ALIVE [🪄](https://telegra.ph/file/bc43ae980fe2528293d45.jpg)\n┣✯{delta_ping * 1000:.3f} ms \n┣✯Uptime🛎 ➫ {uptime}\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➫ [JOIN📍](https://t.me/Attitude_Network)\n┗━━━━━━━━━❥")
 
 @Client.on_message(contact_filter & filters.command(['restart'], prefixes=f"{HNDLR}"))
 async def restart(client, m: Message):
-   await m.reply("`Restarting...`")
+   await m.reply("𝄥𝄞─────────────\n\n 📣RESTARTING.......\n\n📍CONNECTING TO ➥𝐎𝐀𝐍༒☛ SERVER \n\n\n🔗𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 : @Attitude_Network\n\n────────────── 𝄇")
    os.execl(sys.executable, sys.executable, *sys.argv)
    # You probably don't need it but whatever
    quit()
 
 @Client.on_message(contact_filter & filters.command(['help'], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
-   HELP = f"**HELP MENU 🛠** \n\n__USER COMMANDS__ (Anyone can Use if `GROUP_MODE` is set to `True`): \n`{HNDLR}play` \n`{HNDLR}vplay` \n`{HNDLR}stream` (For Radio links) \n`{HNDLR}vstream` (For .m3u8 / live links) \n`{HNDLR}playfrom [channel] ; [n]` - Plays last n songs from channel \n`{HNDLR}playlist` / `{HNDLR}queue` \n\n__SUDO COMMANDS__ (Can only be accessed by You and Your Contacts): \n`{HNDLR}ping` \n`{HNDLR}skip` \n`{HNDLR}pause` and `{HNDLR}resume` \n`{HNDLR}stop` / `{HNDLR}end` \n`{HNDLR}help` \n`{HNDLR}restart`"
+   HELP = f"**⏤͟͟͞͞✯HELP MENU 🛠✰࿐** \n\n✯✯USER COMMANDS✯✯\n➠(Anyone can Use if `GROUP_MODE` is set to `True`): \n➥`{HNDLR}play` \n➥`{HNDLR}vplay` \n➥`{HNDLR}stream` (For Radio links) \n➥`{HNDLR}vstream` (For live video links) \n➥`{HNDLR}playfrom [channel] ; [n]` (Plays last n songs from channel) \n➥`{HNDLR}playlist`  \n➥`{HNDLR}queue` \n\n✯✯SUDO COMMANDS✯✯\n➠(Can only be accessed by You and Your Contacts): \n➥`{HNDLR}ping` \n➥`{HNDLR}skip` \n➥`{HNDLR}pause` \n➥`{HNDLR}resume` \n➥`{HNDLR}stop` \n➥`{HNDLR}end` \n➥`{HNDLR}help` \n➥`{HNDLR}restart`"
    await m.reply(HELP)
