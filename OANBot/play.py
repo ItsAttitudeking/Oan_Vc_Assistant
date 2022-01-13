@@ -53,7 +53,7 @@ async def play(client, m: Message):
    chat_id = m.chat.id
    if replied:
       if replied.audio or replied.voice:
-         huehue = await replied.reply("🔎")
+         huehue = await replied.reply("`✇Connecting to Attitude Network........`")
          dl = await replied.download()
          link = replied.link
          if replied.audio:
@@ -119,7 +119,7 @@ async def play(client, m: Message):
          if len(m.command) < 2:
             await m.reply("𝄥𝄞─────────────\n\n⏤͟͟͞͞✯Reply to an Audio🎧 File or give something to Search🔎\n\n────────────── 𝄇")
          else:
-            huehue = await m.reply("⚡")
+            huehue = await m.reply("`✇Connecting to Attitude Network........`")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search==0:
@@ -156,7 +156,7 @@ async def stream(client, m: Message):
       await m.reply("`Give A Link/LiveLink/.m3u8 URL/YTLink to Play Audio from 🎶`")
    else: 
       link = m.text.split(None, 1)[1]
-      huehue = await m.reply("📣")
+      huehue = await m.reply("`✇Connecting to Attitude Network........`")
 
       # Filtering out YouTube URL's
       regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
