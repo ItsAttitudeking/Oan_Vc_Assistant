@@ -79,7 +79,7 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+            await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio ▶️ **\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
           except Exception as hmme:
             await huehue.edit(hmme)
       else:
@@ -111,7 +111,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio ▶️ **\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
@@ -144,7 +144,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio [▶](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+                        await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Audio ▶️ **\n┃\n┣✯**🎧SONG** : [{songname}]({link}) \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
 
@@ -183,6 +183,6 @@ async def stream(client, m: Message):
                   stream_type=StreamType().pulse_stream,
                )
                add_to_queue(chat_id, "Radio 📻", livelink, link, "Audio", 0)
-               await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Radio [📻](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┃\n┣✯🎧 ➠ **[Radio 📻]({link})** \n┣✯**💬 CHAT** : `{chat_id}` \n┃\n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
+               await huehue.edit(f"┏━━━━━━━━━❥\n┣✯**Started Playing Radio [📻](https://telegra.ph/file/114b8e7116d319d231981.jpg)**\n┣✯🎧 ➠ **[Radio 📻]({link})** \n┣✯**💬 CHAT** : `{chat_id}` \n┣✯𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐛𝐲 ➠ @Attitude_Network\n┗━━━━━━━━━❥", disable_web_page_preview=True)
             except Exception as ep:
                await huehue.edit(f"`{ep}`")
